@@ -1,8 +1,5 @@
 # Atividade de Revisão - Arrow Functions e Funções Assíncronas
 
-Este documento traz respostas escritas de forma natural e exemplos práticos para acompanhamento da atividade.
-
----
 ## Parte 1 - Conceitos Fundamentais
 
 ### 1. Arrow Functions
