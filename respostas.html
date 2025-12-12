@@ -66,15 +66,11 @@
 
           if(line.trim() === ''){
             if(inList){ html += '</ul>'; inList = false; }
-            // ignore empty lines (separação visual será pelos elementos gerados)
             continue;
           }
 
-          // inline code
           const inline = esc(line).replace(/`([^`]+)`/g, '<code>$1</code>');
           if(inList){
-            // se estivermos dentro de uma lista mas a linha atual não é item,
-            // fechamos a lista antes de adicionar o parágrafo
             html += '</ul>'; inList = false;
           }
           html += `<p>${inline}</p>`;
@@ -96,8 +92,6 @@
     }
 
     document.getElementById('btnLoad').addEventListener('click', () => loadResponses());
-
-    // carregar automaticamente ao abrir a página
     window.addEventListener('DOMContentLoaded', () => {
       loadResponses();
     });
