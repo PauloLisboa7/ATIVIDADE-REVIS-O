@@ -1,5 +1,3 @@
-// app.js
-// Utiliza arrow functions e async/await para controlar o mini-dashboard
 
 const $ = (sel) => document.querySelector(sel);
 const logArea = $('#logs');
@@ -21,7 +19,6 @@ const renderList = (items) => {
   });
 };
 
-// Handlers (arrow functions)
 const handleLoad = async () => {
   appendLog('Iniciando carregamento de itens...');
   try {
@@ -49,7 +46,6 @@ const handleSearch = async () => {
   }
 };
 
-// Exemplo de encadeamento: busca um item e depois informações relacionadas
 const handleChain = async () => {
   const id = $('#searchId').value.trim() || '1';
   appendLog(`Iniciando sequência encadeada para id=${id}`);
@@ -69,11 +65,9 @@ const handleClear = () => {
   results.innerHTML = '';
 };
 
-// Conectar eventos (arrow functions como handlers)
 $('#btnLoad').addEventListener('click', () => handleLoad());
 $('#btnSearch').addEventListener('click', () => handleSearch());
 $('#btnChain').addEventListener('click', () => handleChain());
 $('#btnClear').addEventListener('click', () => handleClear());
 
-// Instrução rápida para desenvolvedor: testes manuais
 appendLog('Dashboard pronto — use os botões acima para testar.');
