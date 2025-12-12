@@ -1,5 +1,3 @@
-// services.js
-// Simulação de API com atrasos e possíveis erros
 
 const _fakeData = [
   { id: 1, name: 'Item Alpha', value: 10 },
@@ -25,7 +23,6 @@ const fetchItemById = (id) => {
   });
 };
 
-// Função que depende do resultado de outra (encadeamento)
 const fetchRelatedInfo = async (id) => {
   const item = await fetchItemById(id);
   return new Promise((resolve) => {
@@ -33,7 +30,6 @@ const fetchRelatedInfo = async (id) => {
   });
 };
 
-// Expor as funções para uso no app (navegador) e também como módulo (Node)
 if (typeof window !== 'undefined') {
   window.services = {
     fetchItems,
